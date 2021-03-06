@@ -1,5 +1,7 @@
 # Pac-Man MDP Agent
-A pacman agent using observable Markov decision process. The sole file here is mean to be used with Berkley's [Pac-Man Projects
+This work shows the implementation and statistical analysis of an AI agent capable of winning the arcade game of Pac-Man using an MDP solver that follows a policy based on Value Iteration
+
+ The sole file here is mean to be used with Berkley's [Pac-Man Projects
 ](http://ai.berkeley.edu/project_overview.html). It therefore only contains the logic associated with a MDP agent trying to win the Pac-Man game.
 
 The full report can be found [here](docs/report.pdf).
