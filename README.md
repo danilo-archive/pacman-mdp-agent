@@ -6,6 +6,12 @@ This work shows the implementation and statistical analysis of an AI agent capab
 
 The full report can be found [here](docs/report.pdf).
 
+## Example Game
+
+<div align="center">
+<img with="60%" src="docs/game.gif">
+</div>
+
 ## Environment
 
 The code is meant to be run on [Python 2.7](https://www.python.org/download/releases/2.7/)
