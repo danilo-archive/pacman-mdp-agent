@@ -18,18 +18,38 @@ The game itself is also modelled as a stochastic variation of the Pac-Man game, 
 ## Environment
 
 The code is meant to be run on [Python 2.7](https://www.python.org/download/releases/2.7/)
-
 ## Instructions
 
 Run the agent on a small grid:
 
 ```zsh
-python pacman.py -p MDPAgent
+python pacman.py -p MDPAgent -l smallGrid
 ```
 
 ### Additional tags
 
+#### Game tags
 - `-q` to run without UI
 - `-l` to specify the layout (the code was written for `-l smallGrid` and `-l mediumClassic`)
 - `-n` to specify how many times to run the game (e.g.: `-n 25`)
 
+#### Custom Constant tags
+These tags modify the default value of the constants used to generate the utiliy values
+| Argument | Constant              | Default |
+|----------|-----------------------|---------|
+| --ELR    | EMPTY_LOCATION_REWARD | -0.04   |
+| --FR     | FOOD_REWARD           | 10      |
+| --CR     | CAPSULE_REWARD        | 100     |
+| --GR     | GHOST_REWARD          | -1000   |
+| --GA     | GAMMA                 | 0.9     |
+| --DZR    | DANGER_ZONE_RATIO     | 6       |
+| --DG     | DANGER                | 500     |
+| --IT     | ITERATIONS            | 10      |
+
+### Example with custom tags
+
+Running the MDPAgent 23 times without the UI with custom values for GHOST_REWARD and FOOD_REWARD on mediumClassic:
+
+```zsh
+python pacman.py -l mediumClassic -p MDPAgent -n 25 -q --GR -123 --FR 34
+```
